@@ -27,7 +27,7 @@ $ yarn
 $ npm install
 ```
 
-Depois de instalar as dependências você pode executar o script disponível no `package.json`, o `dev`, isto pode ser feito tanto com `yarn` quando `npm`, veja o exemplo abaixo:
+Depois de instalar as dependências, você pode executar o script disponível no `package.json`, o `dev`, pode ser feito tanto com `yarn` quando `npm`, veja o exemplo abaixo:
 
 > O script irá subir um servidor que irá prover acesso a uma API para consulta de produtos utilizando `json-server` e também subirá o projeto React.
 
@@ -41,11 +41,11 @@ $ npm run dev
 
 ## Tecnologias e Recursos
 
-Para este projeto foi usado o script da comunidade React.JS `create-react-app` para fazer o startup do projeto, mas também está presente dentro do projeto algumas bibliotecas, são elas:
+Para este projeto foi usado o script da comunidade React.JS `create-react-app` para fazer o startup do projeto, mas também estão presente dentro do projeto algumas bibliotecas, são elas:
 
 - [zustand](https://github.com/pmndrs/zustand) - Usado para realizar a gestão do estado global dos produtos, diferente do Redux a instalação e configuração do `zustand` é simples e rápida, e há bastante recursos que podem ser usados.
 - [react-use](https://github.com/streamich/react-use) - Esta fornece uma grande lista de `hooks` utéis dentre eles, o que usamos foi o [useMedia](https://github.com/streamich/react-use/blob/master/docs/useMedia.md), usado para tratar responsividade de componentes.
-- [react-router-dom](https://reactrouter.com/) - Usado para trabalharmos com rotas e páginas dentro react.
+- [react-router-dom](https://reactrouter.com/) - Usado para trabalhar com rotas e páginas dentro react.
 - [react-icons](https://react-icons.github.io/) - Uma grande lista de icones disponíveis de diversas comunidades diferentes, como por exemplo, Material UI.
 - [styled-components](https://styled-components.com/) - Utilizado para realizar a criação do CSS de componentes e páginas de uma forma mais dinâmica.
 - [Jest](https://jestjs.io) - Ferramenta para testes automáticos.
@@ -62,4 +62,4 @@ $ yarn test
 $ npm run test
 ```
 
-> Vale ressaltar que apenas um componente ([`<Button />`](src/components/Button/Button.test.tsx)) tem teste funcionando que foi usando para demostrar como seria feito o teste de um componente dentro do React.JS utilizandos as práticas que mais conheço.
+> Vale ressaltar que apenas um componente ([`<Button />`](src/components/Button/Button.test.tsx)) tem teste funcionando, somente para demostrar como seriam feitos os testes de componentes dentro do React.JS.
