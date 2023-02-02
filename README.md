@@ -1,46 +1,65 @@
-# Getting Started with Create React App
+# Wefit Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este projeto foi desenvolvido como solução do desafio da empresa [Wefit](https://wefit.com.br/) que consiste em uma simulação de loja virtual (e-commerce).
 
-## Available Scripts
+## Sumário
 
-In the project directory, you can run:
+- [Acessando Online](#acessando-online)
+- [Executando Localmente](#executando-localmente)
+- [Tecnologias e Recursos](#tecnologias-e-recursos)
+- [Testes Unitários](#testes-unitários)
 
-### `npm start`
+## Acessando Online
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Você poderá acessar o projeto online e funcionado [aqui](https://wefit-front-end.vercel.app) ou acessando o endereço: `https://wefit-front-end.vercel.app`.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Executando Localmente
 
-### `npm test`
+Antes de executar o projeto é necessário que instale todas as dependências necessárias do projeto, isto pode ser feito utilizando `yarn` ou `npm`, como no exemplo abaixo:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+> Dê preferencia ao `yarn` pois há o arquivo `yarn.lock` que fará que a instalação seja mais rápida.
 
-### `npm run build`
+```sh
+# installing using yarn
+$ yarn
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# installing using npm
+$ npm install
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Depois de instalar as dependências você pode executar o script disponível no `package.json`, o `dev`, isto pode ser feito tanto com `yarn` quando `npm`, veja o exemplo abaixo:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+> O script irá subir um servidor que irá prover acesso a uma API para consulta de produtos utilizando `json-server` e também subirá o projeto React.
 
-### `npm run eject`
+```sh
+# executing dev script using yarn
+$ yarn dev
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+# executing dev string usgin npm
+$ npm run dev
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Tecnologias e Recursos
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Para este projeto foi usado o script da comunidade React.JS `create-react-app` para fazer o startup do projeto, mas também está presente dentro do projeto algumas bibliotecas, são elas:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- [zustand](https://github.com/pmndrs/zustand) - Usado para realizar a gestão do estado global dos produtos, diferente do Redux a instalação e configuração do `zustand` é simples e rápida, e há bastante recursos que podem ser usados.
+- [react-use](https://github.com/streamich/react-use) - Esta fornece uma grande lista de `hooks` utéis dentre eles, o que usamos foi o [useMedia](https://github.com/streamich/react-use/blob/master/docs/useMedia.md), usado para tratar responsividade de componentes.
+- [react-router-dom](https://reactrouter.com/) - Usado para trabalharmos com rotas e páginas dentro react.
+- [react-icons](https://react-icons.github.io/) - Uma grande lista de icones disponíveis de diversas comunidades diferentes, como por exemplo, Material UI.
+- [styled-components](https://styled-components.com/) - Utilizado para realizar a criação do CSS de componentes e páginas de uma forma mais dinâmica.
+- [Jest](https://jestjs.io) - Ferramenta para testes automáticos.
 
-## Learn More
+## Testes Unitários
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Este projeto está configurado com o `Jest` para executar testes unitários, para executar os testes basta rodar o seguinte comando:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```sh
+# running tests using yarn
+$ yarn test
+
+# running tests using npm
+$ npm run test
+```
+
+> Vale ressaltar que apenas um componente ([`<Button />`](src/components/Button/Button.test.tsx)) tem teste funcionando que foi usando para demostrar como seria feito o teste de um componente dentro do React.JS utilizandos as práticas que mais conheço.
